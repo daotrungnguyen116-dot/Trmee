@@ -108,14 +108,12 @@ const points = new THREE.Points(geometry, material);
 scene.add(points);
 
 let t = 0;
-
 function animate(){
 requestAnimationFrame(animate);
 t += 0.02;
 
-/* rotation */
+/* rotate only around Y axis */
 points.rotation.y += 0.01;
-points.rotation.x = 0.2 + 0.05*Math.sin(t);
 
 /* breathing effect */
 const scale = 1 + 0.03*Math.sin(t*2);
